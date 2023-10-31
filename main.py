@@ -1,6 +1,7 @@
 from PIL import Image
 import os
 
+
 def compress_images(image_folder):
     try:
         for file in os.listdir(image_folder):
