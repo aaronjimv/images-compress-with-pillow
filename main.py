@@ -8,12 +8,12 @@ def compress_images(image_folder):
             print("compressing images " + file_name + file_extension)
 
             if file_extension == '.jpg':
-                file_compress = Image.open(image_folder + file)
-                file_compress.save(
-                    file_name + "_compress.jpg",
-                    optimize=True,
-                    quality=20
-                )
+                with Image.open(image_folder + file) as file_compress:
+                    file_compress.save(
+                        file_name + "_compress.jpg",
+                        optimize=True,
+                        quality=20
+                    )
     except FileNotFoundError as error:
         print(f"ERROR: {error}")
 
