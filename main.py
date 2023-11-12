@@ -7,7 +7,8 @@ def compress_images(image_folder):
     Compresses all JPEG images in the specified folder.
 
     Parameters:
-    - image_folder (str): The path to the folder containing the images to be compressed.
+    - image_folder (str): The path to the folder containing the images
+        to be compressed.
 
     Raises:
     - FileNotFoundError: If the specified folder is not found.
@@ -15,10 +16,10 @@ def compress_images(image_folder):
     Example:
     >>> compress_images('to-compress/')
 
-    This function iterates through all the files in the specified folder, checks if they have a '.jpg' extension, and compresses them with a quality of 20.
-    The compressed images are saved in the same folder with '_compress' appended to their original names.
-
-    Note: This function uses the Pillow (PIL) library to handle image processing.
+    This function iterates through all the files in the specified folder,
+    checks if they have a '.jpg' extension, and compresses them with a quality
+    of 20. The compressed images are saved in the same folder with '_compress'
+    appended to their original names.
     '''
     try:
         for file in os.listdir(image_folder):
